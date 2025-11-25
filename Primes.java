@@ -30,16 +30,4 @@ public class Primes {
         }
         return primearray;
     }
-
-    public static int[] primeresult (boolean[] asr, int n) {
-        asr = primenums(n);
-        int[] index = new int[n];
-        for (int i = 0; i < primenums(n).length; i++) {
-            primecounter = 0;
-            if (primenums(n)[i] == true) {
-                index[i] = i;
-            }
-        }
-        return index;
-    }
 }

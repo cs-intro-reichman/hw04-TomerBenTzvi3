@@ -138,11 +138,11 @@ public class ArrCharOps {
      *  The hash value of an empty array is zero.
      */
     public static long hashCode(char[] arr) {
-        long result = 0;
+        long hash = 0;
         for (int i = 0; i < arr.length; i++) {
-            result =+ arr[i] * (long)Math.pow(7, arr.length - 1 - i);
+            hash += arr[i] * Math.pow(7, arr.length - 1 - i);
         }
-        return result;
+        return hash;
     }
 
     /**
@@ -181,21 +181,19 @@ public class ArrCharOps {
                         return -1;
                     }else if (str1.charAt(i) > str2.charAt(i)) {
                         return 1;
-                    }else if (str1.charAt(str1.length() - 1) == str2.charAt(str2.length() - 1)) {
+                    }else if (i == str1.length() - 1 && str1.charAt(str1.length() - 1) == str2.charAt(str2.length() - 1)) {
                         return 0;
                     }
                 }
             }
-        }else {
-             for (int i = 0; i < str1.length(); i++) {
+        }else if (str1.length() != str2.length()) {
+             for (int i = 0; i < Math.min(str1.length(), str2.length()); i++) {
                 if (str1.toLowerCase().charAt(i) != str2.toLowerCase().charAt(i)) {
                     if (str1.charAt(i) < str2.charAt(i)) {
                         return -1;
                     }else if (str1.charAt(i) > str2.charAt(i)) {
                         return 1;
-                    }else if (str1.charAt(str1.length() - 1) == str2.charAt(str2.length() - 1)) {
-                        return 0;
-                    }
+                    }   
                 }
             }
         }

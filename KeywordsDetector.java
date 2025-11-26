@@ -23,9 +23,12 @@ public class KeywordsDetector {
     public static void detectAndPrint(String[] sentences, String[] keywords) {
        
         for (int i = 0; i < sentences.length; i++) {
+            String lowerSentence = sentences[i].toLowerCase();
             for (int j = 0; j < keywords.length; j++) {
-                if (sentences[i].toLowerCase().indexOf(keywords[j]) != -1) {
+                String lowerKeyword = keywords[j].toLowerCase();
+                if (lowerSentence.contains(lowerKeyword)) {
                     System.out.println(sentences[i]);
+                    break;
                 }
             }
         } 

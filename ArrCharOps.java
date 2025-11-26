@@ -174,7 +174,7 @@ public class ArrCharOps {
         }
         if (str1.length() == str2.length()) {
             for (int i = 0; i < str1.length(); i++) {
-                if (str1.charAt(i) != str2.charAt(i)) {
+                if (str1.toLowerCase().charAt(i) != str2.toLowerCase().charAt(i)) {
                     if (str1.charAt(i) < str2.charAt(i)) {
                         return -1;
                     }else if (str1.charAt(i) > str2.charAt(i)) {
@@ -186,7 +186,7 @@ public class ArrCharOps {
             }
         }else {
              for (int i = 0; i < str1.length(); i++) {
-                if (str1.charAt(i) != str2.charAt(i)) {
+                if (str1.toLowerCase().charAt(i) != str2.toLowerCase().charAt(i)) {
                     if (str1.charAt(i) < str2.charAt(i)) {
                         return -1;
                     }else if (str1.charAt(i) > str2.charAt(i)) {

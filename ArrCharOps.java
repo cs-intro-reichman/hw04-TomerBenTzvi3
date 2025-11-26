@@ -120,10 +120,12 @@ public class ArrCharOps {
      *  characters containing the characters "urge".
      */     
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
+         if (beginIndex < 0 || endIndex > arr.length || beginIndex >= endIndex) {
+            return null;
+        }
         char[] arrnew = new char[endIndex - beginIndex];
         for (int i = beginIndex; i < endIndex; i++) {
-            char temp = arr[i];
-            arrnew[i] = temp;
+            arrnew[i - beginIndex] = arr[i];
         }
         return arrnew;
     }

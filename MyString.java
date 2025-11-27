@@ -30,13 +30,23 @@ public class MyString {
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
+         if (str1 == null || str2 == null) {
+            return false;
+        }
+        if (str2.length() == 0) {
+            return true;
+        }
+        if (str2.length() > str1.length()) {
+            return false;
+        }
         char[] arr2 = str2.toCharArray();
         for (int i = 0; i < str1.length(); i++) {
-                char temp2 = arr2[i];
+            for (int j = 0; j < arr2.length; j++) {
+                char temp2 = arr2[j];
                 if (str1.indexOf(temp2) == -1) {
                     return false;
                 }
-                break;
+            }
         }
         return true;
     }

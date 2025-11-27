@@ -32,12 +32,10 @@ public class MyString {
     public static boolean contains(String str1, String str2) {
         char[] arr2 = str2.toCharArray();
         for (int i = 0; i < str1.length(); i++) {
-            for (int j = 0; j < arr2.length; j++) {
-                char temp2 = arr2[j];
+                char temp2 = arr2[i];
                 if (str1.indexOf(temp2) == -1) {
                     return false;
                 }
-            }
         }
         return true;
     }

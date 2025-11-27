@@ -34,11 +34,8 @@ public class MyString {
         for (int i = 0; i < str1.length(); i++) {
             for (int j = 0; j < arr2.length; j++) {
                 char temp2 = arr2[j];
-                boolean contains = str1.indexOf(temp2) == -1;
-                if (contains) {
+                if (str1.indexOf(temp2) == -1) {
                     return false;
-                }else {
-                    continue;
                 }
             }
         }

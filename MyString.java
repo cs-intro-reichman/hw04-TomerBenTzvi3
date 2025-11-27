@@ -36,6 +36,7 @@ public class MyString {
                 if (str1.indexOf(temp2) == -1) {
                     return false;
                 }
+                break;
         }
         return true;
     }
